@@ -1,0 +1,85 @@
+.form{
+    margin: 0 110px;
+    margin-top: -20px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+#input{
+    font-size: 20px;
+    width: 300px;
+    padding: 15px 55px ;
+    display: flex;
+    align-items: center;
+    margin: 20px 0 20px 0;
+    border: 2px solid #03c04a;
+    border-radius: 10px;
+}
+
+.checkbox-input {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 17px;
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.checkbox-input .checkbox input[type="number"]{
+    -moz-appearance: textfield;
+    width: 110px;
+    padding: 10px 39px;
+    font-size: 15px;
+    border: 2px solid #03c04a;
+    border-radius: 10px;
+    float: right;
+    margin-top: 5px;
+
+}
+
+.checkbox-input .checkbox input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    accent-color: #03c04a ;
+}
+
+
+
+.checkbox-input .checkbox input[type="checkbox"]:checked{
+    background-color: #03c04a;
+}
+
+.submitBtn{
+    width: 200px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #03c04a;
+    border: 2px solid #03c04a;
+    margin: 20px 0;
+
+}
+.submitBtn:hover{
+    color: white;
+    background-color: #03c04a;
+    border: 2px solid white;
+    transition: 0.3s ease;
+}

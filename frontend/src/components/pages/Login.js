@@ -101,6 +101,13 @@ const Login = (props) => {
 							onChange={onChangePassword}
 							validations={[required]}
 						/>
+						          {message && (
+									<div className="form-group">
+									<div className="alert alert-danger" role="alert">
+										{message}
+									</div>
+									</div>
+								)}
 						<CheckButton type="submit" className={styles.green_btn} ref={checkBtn}>
 							Se Connecter
 						</CheckButton>

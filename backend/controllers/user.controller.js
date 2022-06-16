@@ -54,7 +54,7 @@ exports.UpdateUser = async (req, res) => {
       User.findOneAndUpdate({_id:req.params.id},[{
         $set: {
           name: req.body.name != null?req.body.name:user.name,
-          phone: req.body.phone != null?req.body.phone:user.phone,
+          email: req.body.email != null?req.body.email:user.email,
           pic: req.body.pic != null?req.body.pic:user.pic
         }
       }],{new:true})

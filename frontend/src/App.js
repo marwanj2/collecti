@@ -7,6 +7,7 @@ import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login';
 import Layout from './component/layout/Layout';
+import Dashboard from './pages/Dashboard';
 
 
 
@@ -21,6 +22,8 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login}/>
           <Route path='/layout' component={Layout} />
+          <Route path='/dasborad' component={Dashboard} />
+
         </Switch>
       </Router>
     </>

@@ -3,6 +3,13 @@ const app = express()
 const dotenv = require("dotenv")
 const morgan = require("morgan")
 const mongoose = require('mongoose');
+const cors = require('cors')
+
+const corsOptions ={
+  origin: "*"
+}
+
+app.use(cors(corsOptions));
 
 const connectDB = async () =>{
     const connectionParams = {

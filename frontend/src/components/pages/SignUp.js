@@ -62,6 +62,7 @@ const SignUp = (props) =>{
 	const form = useRef();
 	const checkBtn = useRef();
   
+	const [type, setType] = useState("citoyen");
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -98,7 +99,7 @@ const SignUp = (props) =>{
 	  form.current.validateAll();
   
 	  if (checkBtn.current.context._errors.length === 0) {
-		AuthService.register(name, email, password, phone).then(
+		AuthService.register(name, email, password, phone, type).then(
 		  (response) => {
 			setMessage(response.data.message);
 			setSuccessful(true);
@@ -166,6 +167,10 @@ const SignUp = (props) =>{
 							onChange ={onChangePassword}
 							validations={[required, vpassword]}
 						/>
+						<select className={styles.input} name="type"  value ={type} onChange={(e) => setType(e.target.value)}>
+							<option value="citoyen">Citoyen</option>
+							<option value="organisateur">Organisation</option>
+						</select>
 						{message && (
 							<div className="form-group">
 								<div className={

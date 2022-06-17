@@ -29,7 +29,7 @@ const vphone = (value) => {
 const Login = (props) => {
 	const form = useRef();
 	const checkBtn = useRef();
-  
+
 	const [phone, setPhone] = useState(null);
 	const [password, setPassword] = useState("");
 	const [loading, setLoading] = useState(false);
@@ -55,9 +55,14 @@ const Login = (props) => {
 		console.log(checkBtn)
 	  if (checkBtn.current.context._errors.length === 0) {
 		AuthService.login(phone, password).then(
-		  () => {
-			props.history.push("/");
-			//window.location.reload();
+		  (user) => {
+			console.log(user);		
+			if(user.roles.includes("ROLE_ADMIN")){
+				 props.history.push("/layout");
+			}
+			else{
+				props.history.push("/home");
+			}//window.location.reload();
 		  },
 		  (error) => {
 			const resMessage =

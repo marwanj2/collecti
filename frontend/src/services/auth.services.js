@@ -20,6 +20,7 @@ const login = (phone, password) => {
     })
     .then((response) => {
       if (response.data.accessToken) {
+        console.log(response.data);
         localStorage.setItem("user", JSON.stringify(response.data));
       }
 

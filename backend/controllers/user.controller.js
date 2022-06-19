@@ -55,6 +55,7 @@ exports.UpdateUser = async (req, res) => {
         $set: {
           name: req.body.name != null?req.body.name:user.name,
           email: req.body.email != null?req.body.email:user.email,
+          type: req.body.type != null ?req.body.type : user.type,
           pic: req.body.pic != null?req.body.pic:user.pic
         }
       }],{new:true})

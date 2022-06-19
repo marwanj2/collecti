@@ -1,7 +1,7 @@
 import React from 'react';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
@@ -9,11 +9,12 @@ import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login';
 import Layout from './component/layout/Layout';
-import Dashboard from './pages/Dashboard';
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './assets/css/grid.css'
 import './assets/css/theme.css'
 import './assets/css/index.css'
+import LayoutUser from './component/user/layout/LayoutUser';
+import Details from './pages/Details';
 
 
 
@@ -28,8 +29,8 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login}/>
           <Route path='/layout' component={Layout} />
-          <Route path='/dasborad' component={Dashboard} />
-
+          <Route path='/layoutuser' component={LayoutUser} />
+          <Route path='/customer/:Id' component={Details} />
         </Switch>
       </Router>
     </>

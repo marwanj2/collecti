@@ -1,6 +1,6 @@
 import React from "react";
 
-function Alert({message, show}) {
+const Alert = ({message, show})=> {
   return (
     <div class="alert alert-success" role="alert" style={{display: show ? "block": "none" }}>
     {message}

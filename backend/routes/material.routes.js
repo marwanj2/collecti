@@ -11,7 +11,7 @@ module.exports = function(app) {
     });
 
     app.get("/api/materials",  controller.getAllMaterials);
-    app.post("/api/materials",controller.createMaterial)
+    app.post("/api/material",controller.createMaterial)
     app.put("/api/materials/:id", controller.UpdateMaterial)
     app.delete("/api/materials/:id",  controller.deleteMaterial);
 

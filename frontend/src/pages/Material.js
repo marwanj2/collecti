@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RowDetails from "../component/MaterialRowDetails";
 import axios from "axios";
 import Alert from "../component/Alert";
+import { Link } from "react-router-dom";
 
 const Material = () => {
 
@@ -12,7 +13,7 @@ const Material = () => {
 
   /* delete */
   const OnDelete = (id__)=>{
-    if(window.confirm("are you sure to delete this material")){
+    if(window.confirm("Etes vous sur de supprimer ce matériel?")){
 
      axios.delete(`http://localhost:8080/api/materials/${id__}`)
      .then(res=>{
@@ -32,14 +33,18 @@ useEffect(async () => {
     });
   }, []);
   return (
-    <div className="row p-4">
-      <Alert message={message} show={show}/>
-    <div className="mt-4">
-        <h2>liste des Matériels</h2>
+    <div className="c" style={{width:'90%'}}>
+      <div className="box-nav d-flex justify-between" style={{marginLeft:'38px', fontSize:'20px', borderRadius:'12px'}}>
+          <Link to='/material' className="bg-white" >
+             <span className="text-success" >Ajouter matériel<i className="fas fa-user"></i></span>
+          </Link>
       </div>
+    <div className="row p-4">
+      <Alert message="Matériel supprimer avec succées" show={show}/>
       <div className="col-12 col-lg-7">
+      <div className="col-12 col-lg-3 w-100">
         <table className="table">
-          <thead>
+          <thead className="bg-dark text-white" >
             <tr>
               <th scope="col">Nom des matériels</th>
               <th scope="col">Prix</th>
@@ -58,6 +63,8 @@ useEffect(async () => {
           </tbody>
         </table>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

@@ -6,7 +6,7 @@
         "icon": "bx bx-cart"
     },
     {
-        "display_name": "Utilisateurs",
+        "display_name": "Clients",
         "route": "/customers",
         "icon": "bx bx-user-pin"
     },

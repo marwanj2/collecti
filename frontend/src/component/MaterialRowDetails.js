@@ -6,7 +6,7 @@ function MaterialRowDetails({name, price, Id, OnDelete}) {
   return (
     <tr>
     <th>{name}</th>
-    <td>{price}</td>
+    <td>{price} millime</td>
     <td className="gap__actions">
       <span className="badge bg-info">
         <Link to={`/material/${Id}`} className="text-white">

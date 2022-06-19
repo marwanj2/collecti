@@ -10,6 +10,7 @@
 }
 
 .sidebar__logo {
+    margin-top: 15px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -21,19 +22,17 @@
 .sidebar__admin-logo{
     display: flex;
     flex-direction: row;
-    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
     margin-bottom: 60px;
     margin-top: 20px;
-    border-bottom: 1px solid #03c04a;
-    border-left: 1px solid #03c04a;
-    border-top: 1px solid #03c04a;
+    border-left: 2px solid #03c04a;
     border-radius: 10px;
-    width: 120px;
+    width: 140px;
+    height: 50px;
 }
 
-.sidebar__admin-logo h3{
-    margin: 10px 0 10px 10px;
-}
 
 
 .sidebar__item {

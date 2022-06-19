@@ -12,15 +12,15 @@ const Compte = () => {
 
       };
 
-    const name = "userName"
-    const solde = "userSolde"
+    const name = "Marwen"
+    const solde = "15 dt"
   return (
     <div className='container'>
         <h2>Salut {name}</h2>
         <h3>Votre solde:
             <span>{solde}</span>
         </h3>
-        <h4>Tu peux transférer d'argent vers quelqu'un</h4>
+        <h4>Transférer solde à quelqu'un?</h4>
         <div className='inputaveclabel'>
         <InputGroup
         label="Numéro du personne"

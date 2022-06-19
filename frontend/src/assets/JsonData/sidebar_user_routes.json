@@ -1,0 +1,25 @@
+[
+
+    {
+        "display_name": "Profile",
+        "route": "/profile",
+        "icon": "bx bx-cart"
+    },
+    {
+        "display_name": "Compte",
+        "route": "/compte",
+        "icon": "bx bx-user-pin"
+    },
+    {
+        "display_name": "Transférer Montant",
+        "route": "/transfer",
+        "icon": "bx bx-package"
+    },
+    {
+        "display_name": "déconnecter",
+        "route": "/logout",
+        "icon": "bx bx-log-out"
+    }
+
+
+]

@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 50px;
+    padding: 20px 15px;
+    border-radius: 10px;
+    height: 550px;
+}
+
+h2{
+    padding: 15px ;
+}
+h3{
+    padding: 10px;
+}
+h4{
+    padding: 15px;
+}
+hr{
+    width: 100%;
+    color: #03c04a;
+}
+
+.inputaveclabel{
+    margin: 15px;
+
+}
+
+.btn{
+    border: 1px solid #03c04a;
+    border-radius: 9px;
+    margin-top: 10px;
+}
+.btn:hover{
+    color: #03c04a;
+    background-color: white;
+}

@@ -29,6 +29,7 @@ const UserSidebar = props => {
           <div className="sidebar__logo">
               <a href="/">Collecti</a>
           </div>
+          <div className='sidebaradmin-logo'></div>
           {
               sidebar_items.map((item, index) => (
                   <Link to={item.route} key={index}>

@@ -45,14 +45,14 @@ const Topnav = () => {
             </div>
             <div className="topnav__right">
                 <div className="topnav__right-item">
-                    <Dropdown
+                   {/*<Dropdown
                         icon='bx bx-bell'
                         badge='0'
                         contentData={notifications}
                         renderItems={(item, index) => renderNotificationItem(item,index)}
                         renderFooter={() => <Link to='/'>View All</Link>}
                     />
-                    {/* dropdown here */}
+                    dropdown here */}
                 </div>
                 <div className="topnav__right-item">
                     <i className='bx bx-palette'></i>

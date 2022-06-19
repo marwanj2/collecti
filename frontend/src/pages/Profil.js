@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React,{useState} from 'react'
 import InputGroup from '../component/InputGroup'
-import Uploadimg from './Uploadimg';
 
 const Profil = () => {
     const [form, setForm] = useState({});
@@ -13,10 +12,9 @@ const Profil = () => {
       };
 
 
-  return (
-      <div className='container'>
+      return (
+      <div className='container' style={{marginLeft:'50px'}} >
         <h3>Profile</h3>
-
         <hr/>
         <InputGroup
             label="Nom et prénom"
@@ -33,13 +31,13 @@ const Profil = () => {
             value={form.phone}
           />
           <InputGroup
-            label="Role"
+            label="Addresse"
             type="text"
-            name="roles"
+            name="address"
             onChangeHandler={onChangeHandler}
             value={form.Role}
           />
-        <Uploadimg />
+          <button className='btn' style={{border:'1px solid #03c04a',margin:'20px 280px'}} type='submit'>Edit</button>
       </div>
   )
 }

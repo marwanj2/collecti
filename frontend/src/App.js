@@ -9,13 +9,11 @@ import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login';
 import Layout from './component/layout/Layout';
-import Dashboard from './pages/Dashboard';
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './assets/css/grid.css'
 import './assets/css/theme.css'
 import './assets/css/index.css'
-
-
+import LayoutUser from './component/user/layout/LayoutUser'
 
 function App() {
   return (
@@ -28,7 +26,7 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login}/>
           <Route path='/layout' component={Layout} />
-          <Route path='/dasborad' component={Dashboard} />
+          <Route path='/layoutuser' component={LayoutUser} />
 
         </Switch>
       </Router>

@@ -3,11 +3,8 @@ import styles from "../components/pages/styles.module.css";
 import React,{useState} from 'react'
 import { useEffect } from 'react';
 import InputGroup from '../component/InputGroup'
-<<<<<<< HEAD
 import authServices from '../services/auth.services';
 import userService from '../services/user.Service';
-=======
->>>>>>> 0c25ab19d732ef8d85b06a746bb3c11789006051
 
 const Profil = () => {
 
@@ -30,21 +27,16 @@ const Profil = () => {
           email: form.email,
           type: form.type,
 
-<<<<<<< HEAD
         }).then(res => {
           setSuccessful(true);
           setMessage(res.data.message);
           localStorage.setItem("user", JSON.stringify(res.data));
         })
       }
-  return (
-      <div className='container'>
-        <h3>Profile </h3>
-=======
+
       return (
       <div className='container' style={{marginLeft:'50px'}} >
         <h3>Profile</h3>
->>>>>>> 0c25ab19d732ef8d85b06a746bb3c11789006051
         <hr/>
         <form onSubmit={handleUpadate }>
         <InputGroup
@@ -55,7 +47,7 @@ const Profil = () => {
               disabled
           />
           <InputGroup
-<<<<<<< HEAD
+
               label="Nom et prénom"
               type="text"
               name="name"
@@ -88,15 +80,6 @@ const Profil = () => {
               Profile a été mis à jour avec succès
             </div>}
         </form>
-=======
-            label="Addresse"
-            type="text"
-            name="address"
-            onChangeHandler={onChangeHandler}
-            value={form.Role}
-          />
-          <button className='btn' style={{border:'1px solid #03c04a',margin:'20px 280px'}} type='submit'>Edit</button>
->>>>>>> 0c25ab19d732ef8d85b06a746bb3c11789006051
       </div>
   )
 }

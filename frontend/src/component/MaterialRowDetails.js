@@ -1,18 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function RowDetails({name, phone, montant, roles,price, Id, OnDelete}) {
+function MaterialRowDetails({name, price, Id, OnDelete}) {
 
   return (
     <tr>
     <th>{name}</th>
-    <td>{phone}</td>
-    <td>{montant}</td>
-    <td>{roles}</td>
     <td>{price}</td>
     <td className="gap__actions">
       <span className="badge bg-info">
-        <Link to={`/customer/${Id}`} className="text-white">
+        <Link to={`/material/${Id}`} className="text-white">
           <i className="fas fa-edit"></i>
         </Link>
       </span>
@@ -25,4 +22,4 @@ function RowDetails({name, phone, montant, roles,price, Id, OnDelete}) {
   )
 }
 
-export default RowDetails
+export default MaterialRowDetails

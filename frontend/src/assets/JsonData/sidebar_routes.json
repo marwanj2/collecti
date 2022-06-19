@@ -12,7 +12,7 @@
     },
     {
         "display_name": "Matériels",
-        "route": "/products",
+        "route": "/materials",
         "icon": "bx bx-package"
     },
     {

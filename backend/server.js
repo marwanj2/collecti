@@ -46,6 +46,7 @@ app.get('/', (req,res) =>{
 // routes
 require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
+require("./routes/material.routes")(app);
 
 const port = process.env.PORT || 8080
 
@@ -62,27 +63,27 @@ function initial() {
            if (err) {
              console.log("error", err);
            }
-   
+
            console.log("added 'user' to roles collection");
          });
-   
+
          new Role({
            name: "moderator"
          }).save(err => {
            if (err) {
              console.log("error", err);
            }
-   
+
            console.log("added 'moderator' to roles collection");
          });
-   
+
          new Role({
            name: "admin"
          }).save(err => {
            if (err) {
              console.log("error", err);
            }
-   
+
            console.log("added 'admin' to roles collection");
          });
        }

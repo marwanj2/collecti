@@ -15,7 +15,6 @@ import './assets/css/theme.css'
 import './assets/css/index.css'
 import LayoutUser from './component/user/layout/LayoutUser';
 import Details from './pages/Details';
-import LayoutUser from './component/user/layout/LayoutUser'
 
 
 function App() {

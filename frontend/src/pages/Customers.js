@@ -3,6 +3,7 @@ import InputGroup from "../component/InputGroup";
 import RowDetails from "../component/RowDetails";
 import axios from "axios";
 import Alert from "../component/Alert";
+import userService from "../services/user.Service";
 
 const Customers = () => {
 
@@ -14,27 +15,34 @@ const Customers = () => {
   /* delete */
   const OnDelete = (id__)=>{
     if(window.confirm("are you sure to delete this user")){
-
-     axios.delete(`http://localhost:8080/api/users/${id__}`)
-     .then(res=>{
-      setMessage(res.data.message)
-      setShow(true)
-      setTimeout(() => {
-        setShow(false)
-      }, 4000);
-     })
+      axios.delete(`http://localhost:8080/api/users/${id__}`)
+      .then(res=>{
+        setMessage(res.data.message)
+        users.filter((user) => user._id != id__)
+        setShow(true)
+        setTimeout(() => {
+          setShow(false)
+        }, 4000);
+      })
     }
    }
+   const fetch = async () =>{
+      const res = await userService.getUsers()
+      setUsers(res.data.reverse())
+    }
 
   /* find all users */
-useEffect(async () => {
-    await axios.get("http://localhost:8080/api/users").then((res) => {
-      setUsers(res.data);
-    });
+useEffect(() => {
+    fetch()
   }, []);
+
+  useEffect(() => {
+      fetch()
+    }, [show]);
+
   return (
     <div className="row p-4">
-      <Alert message={message} show={show}/>
+      <Alert message={"Utilisateur a été supprimé avec succés"} show={show}/>
     <div className="mt-4">
         <h2>liste des Clients</h2>
       </div>

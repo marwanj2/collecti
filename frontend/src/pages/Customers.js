@@ -7,6 +7,7 @@ import userService from "../services/user.Service";
 
 const Customers = () => {
 
+  const admin_id = '62a9fd1285af0e9028fe6585'
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState("");
   const [show, setShow] = useState(false);
@@ -63,7 +64,7 @@ useEffect(() => {
                 name={name}
                 phone={phone}
                 montant={montant}
-                roles={roles[0]}
+                roles={roles.includes(admin_id) ? "admin" : "client"}
                 Id = {_id}
                 OnDelete={OnDelete}
               />

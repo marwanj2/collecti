@@ -76,4 +76,23 @@ exports.UpdateUser = async (req, res) => {
           message: "User not found with id " + req.params.id
         });                
       })
-};
+}
+
+exports.transaction = async (req, res) => {
+    User.find({"phone": req.body.phone})  
+    .then(user => {
+      console.log(req.body.montant);
+      User.findOneAndUpdate({"phone": req.body.phone}, {
+        $set: {
+          montant: ( parseInt(req.body.montant) + parseInt(user[0].montant) ).toString()
+        }
+      }).then(user =>{
+        return res.status(201).send(user);
+      }).catch(err => {
+        return res.status(500).send(err);
+      })
+    }).catch(err => {
+      return res.status(404).send("user not found")
+    })
+  }
+

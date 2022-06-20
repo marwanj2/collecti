@@ -28,5 +28,5 @@ app.delete("/api/users/:id", controller.deleteUser);
 
 app.put("/api/users/:id", controller.UpdateUser)
 
-
+app.post("/api/users/transaction", controller.transaction);
 };
